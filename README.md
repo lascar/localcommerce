@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* ruby -v
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
 
-Things you may want to cover:
+* rails -v
+Rails 6.0.3.2
 
-* Ruby version
+* Database
+postgresql
 
-* System dependencies
+## [TODO](TODO.md)
 
-* Configuration
+## [TESTING] (TESTING.md)
 
-* Database creation
+## [BAD_SMELL](BAD_SMELL.md)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## [SCRATCHPAD](SCRATCHPAD.md)
