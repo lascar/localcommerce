@@ -7,13 +7,10 @@
 ## [SCRATCHPAD](SCRATCHPAD.md)
 
 ## NOW
-user
+
+products
 
 ## ALL FEATURES
-* admin dashboard
-
-* user role as admin and user
-
 * user can mark a product of interest
 Products of interest will be a relation many to many.
 The UserProduct model has a boolean 'mailling' for warning the user when
