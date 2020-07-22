@@ -10,9 +10,24 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <nav class="navbar navbar-default navbar-expand-sm bg-light">
+      <div class="container-fluid">
+        <div class="logo_wrapper">
+          <a href="#">
+            <%= image_tag "logoNB.svg",
+                          alt: "logo", class: "img_responsive" %>
+          </a>
+        </div>
+        <%= render "layouts/login_logout_menu" %>
+      </div>
+    </nav>
 
-    <%= yield %>
+    <div id="container" class="container-fluid">
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <%= yield %>
+    </div>
   </body>
 </html>

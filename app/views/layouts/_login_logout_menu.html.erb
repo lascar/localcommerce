@@ -1,0 +1,18 @@
+<ul class="nav nav-pills pull-right">
+  <% if user_signed_in? %>
+    <li>
+      <%= link_to t("devise.action.logout"), destroy_user_session_path,
+        method: :delete, title: t("devise.action.logout"),
+        class: "btn btn-primary btn-sm" %>
+    </li>
+  <% else %>
+    <li>
+      <%= link_to t("devise.action.login"), new_user_session_path,
+          title: t("devise.action.login"), class: "btn btn-primary btn-sm" %>
+    </li>
+    <li>
+      <%= link_to t("devise.action.signup"), new_user_registration_path,
+          title: t("devise.action.signup"), class: "btn btn-secondary btn-sm" %>
+    </li>
+  <% end %>
+</ul>
