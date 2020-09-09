@@ -10,11 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_22_094935) do
+ActiveRecord::Schema.define(version: 2020_07_22_160009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
   enable_extension "plpgsql"
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.text "brands", default: [], array: true
+    t.text "varieties", default: [], array: true
+    t.text "aspects", default: [], array: true
+    t.text "packagings", default: [], array: true
+    t.text "sizes", default: [], array: true
+    t.text "calibers", default: [], array: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_products_on_name", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

@@ -1,0 +1,19 @@
+es:
+  views:
+    show: "Monstrar"
+    edit: "Modificar"
+    destroy: "Eliminar"
+    are_you_sure: "estas seguro?"
+    with_count: " con  %{count}"
+    products:
+      name_plur: "Productos"
+      index: "Listado de productos"
+      new: "Nuevo producto"
+      editing: "Editando el producto"
+      error_save: "%{count} error(es) ha(n) impedido de guardar el producto:"
+      brands: "marcas"
+      varieties: "variedades"
+      aspects: "aspectos"
+      packagings: "acondicionamientos"
+      sizes: "tamaños"
+      calibers: "calibres"

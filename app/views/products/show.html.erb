@@ -1,0 +1,131 @@
+<p>
+  <strong><%= t("activerecord.attributes.products.name") %>:</strong>
+  <%= @product.name %>
+</p>
+
+<div class="row small-font">
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header text-center text-uppercase">
+        <b>
+          <%= t("views.with_count", count: @product.brands.count) + " " +
+            t("views.products.brands") %>
+        </b>
+      </div>
+      <table class="table table-responsive table-hover table-all">
+        <tbody>
+          <% for brand in @product.brands %>
+            <tr>
+              <td><%= brand %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header text-center text-uppercase">
+        <b>
+          <%= t("views.with_count", count: @product.varieties.count) + " " +
+            t("views.products.varieties") %>
+        </b>
+      </div>
+      <table class="table table-responsive table-hover table-all">
+        <tbody>
+          <% for variety in @product.varieties %>
+            <tr>
+              <td><%= variety %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header text-center text-uppercase">
+        <b>
+          <%= t("views.with_count", count: @product.aspects.count) + " " +
+            t("views.products.aspects") %>
+        </b>
+      </div>
+      <table class="table table-responsive table-hover table-all">
+        <tbody>
+          <% for aspect in @product.aspects %>
+            <tr>
+              <td><%= aspect %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row small-font">
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header text-center text-uppercase">
+        <b>
+          <%= t("views.with_count", count: @product.packagings.count) + " " +
+            t("views.products.packagings") %>
+        </b>
+      </div>
+      <table class="table table-responsive table-hover table-all">
+        <tbody>
+          <% for packaging in @product.packagings %>
+            <tr>
+              <td><%= packaging %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header text-center text-uppercase">
+        <b>
+          <%= t("views.with_count", count: @product.sizes.count) + " " +
+            t("views.products.sizes") %>
+        </b>
+      </div>
+      <table class="table table-responsive table-hover table-all">
+        <tbody>
+          <% for size in @product.sizes %>
+            <tr>
+              <td><%= size %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header text-center text-uppercase">
+        <b>
+          <%= t("views.with_count", count: @product.calibers.count) + " " +
+            t("views.products.calibers") %>
+        </b>
+      </div>
+      <table class="table table-responsive table-hover table-all">
+        <tbody>
+          <% for caliber in @product.calibers %>
+            <tr>
+              <td><%= caliber %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+<br>
+<%= link_to t("views.products.edit"), edit_product_path(@product), class: "btn btn-primary" %>&nbsp;
+<%= link_to t("views.products.index"), products_path, class: "btn btn-primary" %>

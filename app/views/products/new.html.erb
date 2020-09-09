@@ -1,0 +1,7 @@
+<h1><%= t("views.products.new") %></h1>
+
+<%= render 'form', product: @product %>
+
+<br>
+
+<%= link_to t("views.products.index"), products_path, class: "btn btn-primary btn-sm" %>

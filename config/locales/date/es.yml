@@ -1,0 +1,13 @@
+es:
+  date:
+    formats:
+      short: "%d-%m-%Y"
+    order: [ !ruby/symbol day, !ruby/symbol month, !ruby/symbol year ]
+    formats:
+      default: "%d-%m-%Y"
+      short: "%d %b"
+      long: "%d %B, %Y"
+    day_names: [Lunes, Martes, Miercoles, Jueves, Viernes, Sábado, Domingo]
+    abbr_day_names: [L, M, X, J, V, S, D]
+    month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Augusto, Septiembre, Octubre, Noviembre, Diciembre]
+    abbr_month_names: [~, Ene, Feb, Mar, Abr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dic]

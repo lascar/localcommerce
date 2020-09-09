@@ -1,0 +1,8 @@
+<h1><%= t("editing") %></h1>
+
+<%= render 'form', product: @product %>
+
+<br>
+
+<%= link_to t("views.show"), @product, class: "btn btn-primary btn-sm" %>&nbsp;
+<%= link_to t("views.products.index"), products_path, class: "btn btn-primary btn-sm" %>
