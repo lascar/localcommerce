@@ -1,6 +1,2 @@
 es:
   controllers:
-    products:
-        successfully_created: "El product fue creado exitosamente."
-        successfully_updated: "El product fue modificado exitosamente."
-        successfully_destroyed: "El product fue eliminado exitosamente."

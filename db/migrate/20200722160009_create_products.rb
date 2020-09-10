@@ -12,5 +12,11 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.timestamps
     end
     add_index :products, :name, unique: true
+    add_index :products, :brands, using: 'gin'
+    add_index :products, :varieties, using: 'gin'
+    add_index :products, :aspects, using: 'gin'
+    add_index :products, :packagings, using: 'gin'
+    add_index :products, :sizes, using: 'gin'
+    add_index :products, :calibers, using: 'gin'
   end
 end

@@ -64,4 +64,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # devise
 gem 'devise'
 # admin dashboard
-gem "administrate"
+gem 'activeadmin'
+# font-awesome
+gem 'font-awesome-rails'

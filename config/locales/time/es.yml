@@ -2,3 +2,4 @@ es:
   time:
     formats:
       short: "%d-%m-%Y"
+      long: "%d-%m-%Y"
