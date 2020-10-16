@@ -6,7 +6,7 @@ class CreateUserProducts < ActiveRecord::Migration[6.0]
       t.string :variety
       t.string :unit_type
       t.integer :unit_quantity
-      t.decimal :unit_price
+      t.decimal :unit_price, precision:  8, scale: 4
       t.boolean :transport_include
 
       t.timestamps
