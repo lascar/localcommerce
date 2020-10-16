@@ -25,9 +25,4 @@ es:
         is_admin: "es admin"
       product:
         name: "nombre"
-        brands: "marcas"
         varieties: "variedades"
-        aspects: "aspectos"
-        packagins: "acodicionamientos"
-        sizes: "tamaños"
-        calibers: "calibres"

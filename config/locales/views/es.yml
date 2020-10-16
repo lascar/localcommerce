@@ -8,9 +8,4 @@ es:
     products:
       name_plur: "Productos"
       index: "Listado de productos"
-      brands: "marcas"
       varieties: "variedades"
-      aspects: "aspectos"
-      packagings: "acondicionamientos"
-      sizes: "tamaños"
-      calibers: "calibres"

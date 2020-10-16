@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_09_161541) do
+ActiveRecord::Schema.define(version: 2020_10_16_210626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,21 +43,25 @@ ActiveRecord::Schema.define(version: 2020_09_09_161541) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.text "brands", default: [], array: true
     t.text "varieties", default: [], array: true
-    t.text "aspects", default: [], array: true
-    t.text "packagings", default: [], array: true
-    t.text "sizes", default: [], array: true
-    t.text "calibers", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["aspects"], name: "index_products_on_aspects", using: :gin
-    t.index ["brands"], name: "index_products_on_brands", using: :gin
-    t.index ["calibers"], name: "index_products_on_calibers", using: :gin
     t.index ["name"], name: "index_products_on_name", unique: true
-    t.index ["packagings"], name: "index_products_on_packagings", using: :gin
-    t.index ["sizes"], name: "index_products_on_sizes", using: :gin
     t.index ["varieties"], name: "index_products_on_varieties", using: :gin
+  end
+
+  create_table "user_products", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "product_id", null: false
+    t.string "variety"
+    t.string "unit_type"
+    t.integer "unit_quantity"
+    t.decimal "unit_price"
+    t.boolean "transport_include"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_user_products_on_product_id"
+    t.index ["user_id"], name: "index_user_products_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -77,4 +81,6 @@ ActiveRecord::Schema.define(version: 2020_09_09_161541) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "user_products", "products"
+  add_foreign_key "user_products", "users"
 end
