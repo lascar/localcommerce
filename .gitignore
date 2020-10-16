@@ -40,3 +40,5 @@ yarn-debug.log*
 yarn-debug.log*
 .yarn-integrity
 /doc/rspec_failures*
+
+/config/master.key

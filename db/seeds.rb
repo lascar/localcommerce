@@ -7,8 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 AdminUser.create!(email: Rails.application.credentials.admin_email,
             password: Rails.application.credentials.admin_password,
-            password_confirmation: Rails.application.credentials.admin_password,
-            admin: true) unless
+            password_confirmation: Rails.application.credentials.admin_password) unless
              AdminUser.find_by(email: Rails.application.credentials.admin_email)
 if Rails.env == "development"
   product1 = Product.find_by(name: "product1") ||

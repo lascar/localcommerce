@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2020_09_09_161541) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "hstore"
   enable_extension "plpgsql"
 
   create_table "active_admin_comments", force: :cascade do |t|
@@ -52,7 +51,13 @@ ActiveRecord::Schema.define(version: 2020_09_09_161541) do
     t.text "calibers", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["aspects"], name: "index_products_on_aspects", using: :gin
+    t.index ["brands"], name: "index_products_on_brands", using: :gin
+    t.index ["calibers"], name: "index_products_on_calibers", using: :gin
     t.index ["name"], name: "index_products_on_name", unique: true
+    t.index ["packagings"], name: "index_products_on_packagings", using: :gin
+    t.index ["sizes"], name: "index_products_on_sizes", using: :gin
+    t.index ["varieties"], name: "index_products_on_varieties", using: :gin
   end
 
   create_table "users", force: :cascade do |t|
